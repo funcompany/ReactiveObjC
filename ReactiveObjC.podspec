@@ -7,15 +7,36 @@
 #
 
 Pod::Spec.new do |s|
+  s.name = 'ReactiveObjC'
+  s.version = '0.0.3'
 
-  s.name         = "ReactiveObjC"
-  s.version      = "0.0.2"
-  s.summary      = "The 2.x ReactiveCocoa Objective-C API: Streams of values over time"
-  s.homepage     = "https://github.com/funcompany/ReactiveObjC"
-  s.platform     = :ios, "8.0"
-  s.license      = "MIT"
-  s.source       = { :git => "https://github.com/funcompany/ReactiveObjC.git", :tag => "0.0.2" }
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+  s.summary = 'A framework for composing and transforming streams of values over time.'
+  s.description = 'ReactiveObjC (formally ReactiveCocoa or RAC) is an Objective-C framework inspired by Functional Reactive Programming. It provides APIs for composing and transforming streams of values.'
 
+  s.author = 'ReactiveCocoa'
+  s.homepage = 'https://github.com/ReactiveCocoa/ReactiveObjC'
+  s.license = { :type => 'MIT', :file => 'LICENSE.md' }
+
+  s.source = { :git => "https://github.com/funcompany/ReactiveObjC.git", :tag => "0.0.3" }
+
+
+  s.ios.deployment_target = '8.0'
+  s.osx.deployment_target = '10.9'
+  s.tvos.deployment_target = '9.0'
+  s.watchos.deployment_target = '2.0'
+
+  s.framework = 'Foundation'
+  
+  s.source_files = 'ReactiveObjC/**/*.{d,h,m}'
+
+  s.private_header_files = [
+    'ReactiveObjC/**/*Private.h',
+    'ReactiveObjC/**/*EXTRuntimeExtensions.h',
+    'ReactiveObjC/**/RACEmpty*.h'
+  ]
+
+  s.ios.exclude_files = 'ReactiveObjC/**/*{AppKit,NSControl,NSText,NSTable}*'
+  s.osx.exclude_files = 'ReactiveObjC/**/*{UIActionSheet,UIAlertView,UIBarButtonItem,UIButton,UICollectionReusableView,UIControl,UIDatePicker,UIGestureRecognizer,UIImagePicker,UIRefreshControl,UISegmentedControl,UISlider,UIStepper,UISwitch,UITableViewCell,UITableViewHeaderFooterView,UIText,MK}*'
+  s.tvos.exclude_files = 'ReactiveObjC/**/*{AppKit,NSControl,NSText,NSTable,UIActionSheet,UIAlertView,UIDatePicker,UIImagePicker,UIRefreshControl,UISlider,UIStepper,UISwitch,MK}*'
+  s.watchos.exclude_files = 'ReactiveObjC/**/*{UIActionSheet,UIAlertView,UIBarButtonItem,UIButton,UICollectionReusableView,UIControl,UIDatePicker,UIGestureRecognizer,UIImagePicker,UIRefreshControl,UISegmentedControl,UISlider,UIStepper,UISwitch,UITableViewCell,UITableViewHeaderFooterView,UIText,MK,AppKit,NSControl,NSText,NSTable,NSURLConnection}*'
 end
