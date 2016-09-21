@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name = 'ReactiveObjC'
-  s.version = '0.0.3'
+  s.version = '0.0.4'
 
   s.summary = 'A framework for composing and transforming streams of values over time.'
   s.description = 'ReactiveObjC (formally ReactiveCocoa or RAC) is an Objective-C framework inspired by Functional Reactive Programming. It provides APIs for composing and transforming streams of values.'
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.homepage = 'https://github.com/ReactiveCocoa/ReactiveObjC'
   s.license = { :type => 'MIT', :file => 'LICENSE.md' }
 
-  s.source = { :git => "https://github.com/funcompany/ReactiveObjC.git", :tag => "0.0.3" }
+  s.source = { :git => "https://github.com/funcompany/ReactiveObjC.git", :tag => "0.0.4" }
 
 
   s.ios.deployment_target = '8.0'
