@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "ReactiveObjC"
+  s.name         = "ReactiveCocoa"
   s.version      = "0.0.1"
   s.summary      = "The 2.x ReactiveCocoa Objective-C API: Streams of values over time"
 
